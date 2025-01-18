@@ -63,7 +63,7 @@ scene.add(messi);
 const moonTexture = new THREE.TextureLoader().load('moon.jpg');
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3.15, 32, 32),
+  new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
   })
@@ -71,7 +71,7 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 30;
+moon.position.z = 35;
 moon.position.setX(-10);
 
 messi.position.z = -5;
@@ -98,10 +98,10 @@ function animate() {
   requestAnimationFrame(animate);
 
   torus.rotation.x += 0.01;
-  torus.rotation.y += 0.05;
-  torus.rotation.z += 0.1;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
 
-  moon.rotation.x += 0.05;
+  moon.rotation.x += 0.005;
 
   // controls.update();
 
